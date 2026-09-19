@@ -23,3 +23,18 @@ class PostManager:
         self.options.add_experimental_option("detach", True)
         self.driver= Driver(uc=True, headed=True)
         self.driver.get(self.url)
+
+    def login(self):
+        time.sleep(10)
+        login_button= self.driver.find_element(By.CSS_SELECTOR,"body > header > div.header--content > div.header--buttons > a.sign-in.ga-header-sign-in > span")
+        login_button.click()
+        time.sleep(10)
+        email_input= self.driver.find_element(By.CSS_SELECTOR,"#identifierId")
+        email_input.click()
+        email_input.send_keys(self.email, Keys.ENTER)
+        time.sleep(5)
+        self.wait= WebDriverWait(self.driver, 3)
+        self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#password > div.aCsJod.oJeWuf > div > div.Xb9hP > input")))
+        password_input= self.driver.find_element(By.CSS_SELECTOR,"#password > div.aCsJod.oJeWuf > div > div.Xb9hP > input")
+        password_input.send_keys(self.password,Keys.ENTER)
+        time.sleep(10)

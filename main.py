@@ -13,9 +13,10 @@ ai.goto_site()
 ai.content_prompt()
 ai.get_answer()
 
-
 blogger= PostManager()
 blogger.goto_site()
+blogger.login()
+
 
 # TODO: 1. log in to blogger
 # TODO: 2. make a blogger post
