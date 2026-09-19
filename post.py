@@ -49,6 +49,10 @@ class PostManager:
             post_title.click()
             post_title.send_keys(title,Keys.ENTER)
             time.sleep(20)
+            frame = self.driver.find_element(By.CLASS_NAME, "ZW3ZFc")
+            self.driver.switch_to.frame(frame)
+            self.driver.switch_to.default_content()
+            print('submitted')
         except Exception as e:
             print(e)
 
