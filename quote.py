@@ -17,3 +17,7 @@ class Quote:
         self.options.add_experimental_option("detach", True)
         self.driver= webdriver.Chrome(service=self.service, options=self.options)
         self.driver.get(self.url)
+
+    def generate(self):
+        randome_quote= self.driver.find_element(By.CSS_SELECTOR,"#__layout > div > div > div > div.text-center.pb-4 > span")
+        randome_quote.click()
