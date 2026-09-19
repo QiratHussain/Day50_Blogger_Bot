@@ -1,3 +1,10 @@
+from post import PostManager
+
+
+
+blogger= PostManager()
+blogger.goto_site()
+
 # TODO: 1. log in to blogger
 # TODO: 2. make a blogger post
 # TODO: 3. generate random quote

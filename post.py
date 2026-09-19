@@ -16,9 +16,10 @@ class PostManager:
         self.url="https://www.blogger.com/about/?bpli=1"
         self.email= os.getenv("EMAIL")
         self.password= os.getenv("PASSWORD")
-    def go(self):
-        print(self.email)
-        print(self.password)
 
-post= PostManager()
-post.go()
+    def goto_site(self):
+        self.options= Options()
+        self.service= Service(ChromeDriverManager().install())
+        self.options.add_experimental_option("detach", True)
+        self.driver= Driver(uc=True, headed=True)
+        self.driver.get(self.url)
