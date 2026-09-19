@@ -38,3 +38,17 @@ class PostManager:
         password_input= self.driver.find_element(By.CSS_SELECTOR,"#password > div.aCsJod.oJeWuf > div > div.Xb9hP > input")
         password_input.send_keys(self.password,Keys.ENTER)
         time.sleep(10)
+
+    def post(self,title, content):
+        try:
+            self.wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,"#yDmH0d > c-wiz > div.wMkthe > gm-raised-drawer > div > div.UMrnmb-yXBf7b-QA0Szd-QFG6Bd-bN97Pc > div > c-wiz > div.kiQDlf > div > div > span > span > span.MIJMVe")))
+            post_button= self.driver.find_element(By.CSS_SELECTOR,"#yDmH0d > c-wiz > div.wMkthe > gm-raised-drawer > div > div.UMrnmb-yXBf7b-QA0Szd-QFG6Bd-bN97Pc > div > c-wiz > div.kiQDlf > div > div > span > span > span.MIJMVe")
+            post_button.click()
+            time.sleep(5)
+            post_title= self.driver.find_element(By.CSS_SELECTOR,"#yDmH0d > c-wiz:nth-child(15) > div > c-wiz > div > div.LYkI7 > div.rFrNMe.rzHh9c.l8Ahzd.zKHdkd.sdJrJc > div.aCsJod.oJeWuf > div > div.Xb9hP > input")
+            post_title.click()
+            post_title.send_keys(title,Keys.ENTER)
+            time.sleep(20)
+        except Exception as e:
+            print(e)
+

@@ -1,6 +1,9 @@
 from post import PostManager
 from quote import Quote
 from content import ai_manager
+from datetime import datetime
+
+today= datetime.today().date()
 
 quote_finder= Quote()
 quote_finder.goto_site()
@@ -10,12 +13,13 @@ author= quote_content[1]
 
 ai= ai_manager()
 ai.goto_site()
-ai.content_prompt()
-ai.get_answer()
+ai.content_prompt(quote_part, author)
+article= ai.get_answer()
 
 blogger= PostManager()
 blogger.goto_site()
 blogger.login()
+blogger.post(f"Happy Morning! {today} ",article)
 
 
 # TODO: 1. log in to blogger
