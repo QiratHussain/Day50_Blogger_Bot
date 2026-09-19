@@ -22,3 +22,11 @@ class ai_manager:
         write 3 human written paragraphed text article in which you add {quote}, make sure you do mention that quote is by {author} inside the article that, and don't write other stuff inside the message so that i can just copy your message and paste on my blog, just send me pastable, and please dont write stuff like here's the paragraph,or in end that you say do you also want or something blah blah that you do, just article to the point that i can copy, i mean it
         ''')
         time.sleep(60)
+
+    def get_answer(self):
+        answers= self.driver.find_elements(By.CSS_SELECTOR,"ol li")
+        if answers:
+            content_text= answers[1].text
+            return content_text
+        else:
+            print("not found")

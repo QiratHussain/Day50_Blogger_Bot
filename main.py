@@ -10,7 +10,8 @@ author= quote_content[1]
 
 ai= ai_manager()
 ai.goto_site()
-
+ai.content_prompt()
+ai.get_answer()
 
 
 blogger= PostManager()
