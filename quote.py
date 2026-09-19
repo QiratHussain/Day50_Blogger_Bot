@@ -18,6 +18,14 @@ class Quote:
         self.driver= webdriver.Chrome(service=self.service, options=self.options)
         self.driver.get(self.url)
 
-    def generate(self):
-        randome_quote= self.driver.find_element(By.CSS_SELECTOR,"#__layout > div > div > div > div.text-center.pb-4 > span")
-        randome_quote.click()
+    def get_quote(self):
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "textarea.quote")))
+        random_link = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "span.faux-link")))
+        random_link.click()
+        time.sleep(1)
+        quote = self.driver.find_element(By.CSS_SELECTOR, "textarea.quote").get_attribute("value")
+        author = self.driver.find_element(By.CSS_SELECTOR, "input.author").get_attribute("value")
+        time.sleep(3)
+        self.driver.close()
+        return quote, author

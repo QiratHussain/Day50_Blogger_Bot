@@ -1,6 +1,11 @@
 from post import PostManager
+from quote import Quote
 
-
+quote_finder= Quote()
+quote_finder.goto_site()
+quote_content= quote_finder.get_quote()
+quote_part= quote_content[0]
+author= quote_content[1]
 
 blogger= PostManager()
 blogger.goto_site()
