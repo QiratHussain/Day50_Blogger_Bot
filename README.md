@@ -1,23 +1,23 @@
-# 🤖 Automated Quote Blogger
+#  Automated Quote Blogger
 
 A Python + Selenium automation project that finds a random quote, sends it to ChatGPT to generate content around the quote, and publishes the result automatically to Blogger.
 
 This project started as my **Day 50 alternative project** during the 100 Days of Code challenge, but I eventually turned it into an idea of my own.
 
-## ✨ What It Does
+##  What It Does
 
 The automation handles the entire workflow:
 
-1. 🌐 Opens a quote website
-2. 🎲 Finds a random quote
-3. 🧠 Sends the quote to ChatGPT
-4. ✍️ Generates content based on the quote
-5. 📝 Opens Blogger
-6. 📤 Publishes the generated content automatically
+1.  Opens a quote website
+2.  Finds a random quote
+3.  Sends the quote to ChatGPT
+4.  Generates content based on the quote
+5.  Opens Blogger
+6.  Publishes the generated content automatically
 
 The goal was to experiment with combining **web scraping, browser automation, AI, and content publishing** into one workflow.
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * **Python**
 * **Selenium**
@@ -27,7 +27,7 @@ The goal was to experiment with combining **web scraping, browser automation, AI
 * **Blogger**
 * **Chrome / ChromeDriver**
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 Automated-Quote-Blogger/
@@ -41,7 +41,7 @@ Automated-Quote-Blogger/
 
 > The exact structure may change as the project evolves.
 
-## 🧩 How It Works
+##  How It Works
 
 The project is divided into separate stages:
 
@@ -65,7 +65,7 @@ Publish
 
 Each stage is handled through browser automation using Selenium.
 
-## 💡 Why I Built It
+##  Why I Built It
 
 This wasn't simply another course exercise.
 
@@ -82,7 +82,7 @@ The project combines several things I've learned throughout my Python journey:
 * Working with multiple websites
 * Integrating AI into an automation workflow
 
-## ⚠️ Current Limitations
+##  Current Limitations
 
 This project currently relies heavily on Selenium and browser interaction.
 
@@ -92,7 +92,7 @@ Some parts may also break if the websites involved change their HTML structure o
 
 The project is currently intended primarily as a **learning and portfolio project**.
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 There are several things I'd like to explore in future versions:
 
@@ -105,7 +105,7 @@ There are several things I'd like to explore in future versions:
 * [ ] Make the workflow easier to configure
 * [ ] Explore deploying the automation as an actual service
 
-## 📚 What I Learned
+##  What I Learned
 
 The biggest lesson from this project wasn't just learning another Selenium technique.
 
@@ -113,7 +113,7 @@ It was learning that **a small personal idea can be turned into an actual softwa
 
 This project also pushed me beyond simply following a tutorial and gave me experience designing an automation workflow from my own idea.
 
-## 🏁 Day 50
+##  Day 50
 
 This project represents my **Day 50** of the 100 Days of Code challenge.
 
@@ -123,10 +123,3 @@ This project represents my **Day 50** of the 100 Days of Code challenge.
 
 And this project was one of my first attempts to answer that question.
 
----
-
-### 👩‍💻 Author
-
-Built by **Qirat** while learning Python, automation, and web development.
-
-More projects coming soon. 🚀
